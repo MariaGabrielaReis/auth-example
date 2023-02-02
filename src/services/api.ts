@@ -2,6 +2,7 @@ import { signOut } from "@/contexts/AuthContext";
 import axios, { AxiosError } from "axios";
 import { GetServerSidePropsContext } from "next";
 import { setCookie, parseCookies } from "nookies";
+import { AuthTokenError } from "./errors/AuthTokenError";
 
 let isRefreshing = false;
 
@@ -93,7 +94,11 @@ export function setupAPIClient(
             });
           });
         } else {
-          if (typeof window !== "undefined") signOut();
+          if (typeof window !== "undefined") {
+            signOut();
+          } else {
+            return Promise.reject(new AuthTokenError());
+          }
         }
       }
 
