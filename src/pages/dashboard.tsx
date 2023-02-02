@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useAuthContext } from "@/contexts/AuthContext";
+import { signOut, useAuthContext } from "@/contexts/AuthContext";
 import { api } from "@/services/apiClient";
 import { withSSRAuth } from "@/utils/withSSRAuth";
 import { setupAPIClient } from "@/services/api";
@@ -18,6 +18,7 @@ export default function Dashboard() {
   return (
     <>
       <h1>Dashboard: {user?.email}</h1>
+      <button onClick={signOut}>Sair</button>
 
       <Can roles={["administrator", "editor"]}>
         <h4>Metrics</h4>
