@@ -6,7 +6,7 @@ import {
   useState,
 } from "react";
 import { setCookie, parseCookies, destroyCookie } from "nookies";
-import { api } from "@/services/api";
+import { api } from "@/services/apiClient";
 import Router from "next/router";
 
 type User = {
@@ -78,7 +78,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
         roles,
       });
 
-      api.defaults.headers["Authorization"] = `Bearer ${token}`;
+      api.defaults.headers.common["Authorization"] = `Bearer ${token}`;
       Router.push("/dashboard");
     } catch (err) {
       console.error(err);
