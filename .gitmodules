@@ -1,0 +1,3 @@
+[submodule "auth-backend-example"]
+	path = auth-backend-example
+	url = git@github.com:MariaGabrielaReis/auth-backend-example.git
