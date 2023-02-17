@@ -1,4 +1,4 @@
-<div align="center"> <img src="" alt="Banner com o nome do projeto"/> </div>
+<div align="center"> <img src="https://user-images.githubusercontent.com/69374340/216840586-2565c115-fe5e-4107-99cc-50c7c3fabb31.png" alt="Banner com o nome do projeto"/> </div>
 
 Projeto para praticar conceitos que envolvem autenticação (utilizando JWT, refresh token, etc) e autorização (cargos e permissões) no frontend <br>
 **Aplicação construída no Chapter IV do Ignite (Trilha React - Rocketseat)** 🚀
